@@ -35,9 +35,11 @@
 
 	</head>
 	<body>
-		<audio style="display: none;"  autoplay="autoplay" loop id="au" controls>
-		  <source src="ignite.mp3" type="audio/mpeg">
-		</audio>
+		<div style="visibility:hidden">
+			<audio autoplay loop id="au" controls>
+			  <source src="ignite.mp3" type="audio/mpeg">
+			</audio>
+		</div>
 
 		<div id="info">
 			Thuy Ha<br>
@@ -89,7 +91,7 @@
 				typewriter();
 			</script>
 		</div>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="build/three.js"></script>
 
